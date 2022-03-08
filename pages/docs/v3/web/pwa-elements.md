@@ -67,6 +67,16 @@ platformBrowserDynamic()
 defineCustomElements(window);
 ```
 
+_vue_
+
+`main.ts or main.js`
+
+````typescript
+import { isPlatform } from '@ionic/vue';
+import { defineCustomElements } from '@ionic/pwa-elements/loader'; 
+if (isPlatform('desktop')) defineCustomElements(window)
+````
+
 #### Including through script tag
 
 PWA Elements can be included through a script tag in your `index.html`. However, keep in mind this will not work for offline scenarios:
